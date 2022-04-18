@@ -1,0 +1,28 @@
+# For local development only.
+
+version: '3'
+
+services:
+  phalcon-7.4:
+    container_name: proxy-psr13-7.4
+    hostname: proxy-psr13-74
+    build: docker/7.4
+    working_dir: /srv
+    volumes:
+      - .:/srv
+
+  proxy-psr13-8.0:
+    container_name: proxy-psr13-8.0
+    hostname: proxy-psr13-80
+    build: docker/8.0
+    working_dir: /srv
+    volumes:
+      - .:/srv
+
+  redis:
+    container_name: proxy-psr13-redis
+    image: redis:5-alpine
+
+  memcached:
+    container_name: proxy-psr13-memcached
+    image: memcached:1.5-alpine
