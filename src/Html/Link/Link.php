@@ -16,7 +16,6 @@ namespace Phalcon\Proxy\Psr13\Html\Link;
 use Phalcon\Html\Link\AbstractLink;
 use Psr\Link\LinkInterface;
 
-
 /**
  * Representation of an HTML link in an object form
  */
@@ -76,5 +75,4 @@ class Link extends AbstractLink implements LinkInterface
     {
         return $this->doIsTemplated();
     }
-
 }
