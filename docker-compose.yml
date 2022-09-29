@@ -19,10 +19,10 @@ services:
     volumes:
       - .:/srv
 
-  redis:
-    container_name: proxy-psr13-redis
-    image: redis:5-alpine
-
-  memcached:
-    container_name: proxy-psr13-memcached
-    image: memcached:1.5-alpine
+  proxy-psr13-8.1:
+    container_name: proxy-psr13-8.1
+    hostname: proxy-psr13-81
+    build: docker/8.1
+    working_dir: /srv
+    volumes:
+      - .:/srv
