@@ -92,7 +92,6 @@ jobs:
       - name: Setup Tests
         shell: bash
         run: |
-          cp tests/_config/.env.default .env
           vendor/bin/codecept build
 
       - name: Run Unit Tests
